@@ -9,13 +9,12 @@ Key takeaways:
 - Important distinctions: undirected vs directed graphs; simple vs weighted/multigraphs; local measures (degree) vs global measures (connectivity, diameter).
 - Dynamics and strategic behavior: diffusion, information cascades, network effects, and how game-theoretic reasoning (e.g., Nash equilibrium) applies when payoffs depend on neighbors.
 
-Keep-writing plan (placeholders you can expand):
+Keep-writing plan:
 
 - Chapter 2 — Graph algorithms & measures (centrality, clustering, shortest paths).
 - Chapter 3 — Random graph models and generative processes (Erdos–Renyi, preferential attachment).
 - Chapter 4 — Dynamics on networks (epidemics, threshold/adoption models, opinion dynamics).
 - Exercises and suggested datasets for hands-on practice.
 
-If you want, I can shorten this further (one-paragraph abstract), or generate a simple chapter roadmap file listing tentative topics and exercises for each upcoming chapter.
 
 
