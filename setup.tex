@@ -1,0 +1,123 @@
+\usepackage[mmddyyyy]{datetime}	
+\usepackage[margin=0.7in]{geometry}		% For setting margins
+\usepackage{amsmath}				% For Math
+\usepackage{fancyhdr}				% For fancy header/footer
+\usepackage{graphicx}				% For including figure/image
+\usepackage{cancel}					% To use the slash to cancel out stuff in work
+\usepackage{subcaption}
+\usepackage{makecell}
+\usepackage{blindtext}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage{longfbox} 
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=teal, urlcolor=magenta]{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit, backgrounds}
+\usepackage{amsthm}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Set up fancy header/footer
+\pagestyle{fancy}
+\fancyhead[LO,L]{Introduction to Network Model}
+\fancyhead[CO,C]{}
+\fancyhead[RO,R]{\today}
+% \fancyfoot[LO,L]{aivietnam.edu.vn}
+% \fancyfoot[CO,C]{}
+% \fancyfoot[RO,R]{www.facebook.com/aivietnam.edu.vn}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[most]{tcolorbox}  % For the tcolorbox environment
+\usepackage{algorithm}
+\usepackage{algpseudocode} % Modern replacement for algorithmic
+\usepackage{colortbl}
+\usepackage{multicol} % Allows multiple columns
+\usepackage{lipsum}
+\usepackage[backend=biber,style=ieee]{biblatex} % Use Biber and specify the citation style
+\addbibresource{references.bib} % Link to your .bib file
+%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\annotate}[1]{\marginpar{\footnotesize\color{gray}#1}}
+\NewDocumentCommand{\define}{m o}{\emph{#1}\annotate{\IfValueTF{#2}{#2}{#1}}}
+%%%% Definition
+% ---- Preamble setup ----
+ % loads theorems, skins, breakable, etc.
+\tcbuselibrary{theorems, skins, breakable}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+% Base look & feel for all theorem boxes
+\tcbset{
+  mytheo/.style={
+    enhanced,
+    breakable,
+    coltitle=black,
+    fonttitle=\bfseries,
+    boxed title style={boxrule=0pt},
+    title after break=\textit{(continued)}}
+}
+
+% ---- Environments ----
+% Number within section; change to number within=chapter if you prefer
+\newtcbtheorem[number within=section,crefname={definition}{definitions}]%
+  {definition}{Definition}%
+  {mytheo,colback=blue!3,colframe=blue!80!black!20,boxed title style={colback=blue!12}}%
+  {def}
+
+\newtcbtheorem[number within=section,crefname={properties}{properties}]%
+  {properties}{Properties}%
+  {mytheo,colback=purple!3,colframe=purple!60!black!20,boxed title style={colback=purple!12}}%
+  {prop}
+
+\newtcbtheorem[number within=section,crefname={example}{examples}]%
+  {example}{Example}%
+  {mytheo,colback=orange!3,colframe=orange!70!black!20,boxed title style={colback=orange!15}}%
+  {ex}
+
+  \newtcbtheorem[number within=section,crefname={tip}{tips}]%
+  {tip}{Tip}%
+  {mytheo,
+   colback=green!3,
+   colframe=green!60!black!20,
+   boxed title style={colback=green!12},
+   title={Tip: #2}}%
+  {tip}
+
+
+% listings settings
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
