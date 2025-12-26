@@ -121,3 +121,21 @@
 }
 
 \lstset{style=mystyle}
+
+\newif\ifshowanswers
+\showanswersfalse  % change to \showanswerstrue to print the answer key
+
+\newenvironment{mcqblock}[1]{%
+  \section*{#1}
+  \begin{multicols}{2}
+  \begin{enumerate}[leftmargin=*, itemsep=0.6\baselineskip]
+}{%
+  \end{enumerate}
+  \end{multicols}
+}
+
+\newenvironment{choices}{%
+  \begin{enumerate}[label=(\Alph*), leftmargin=*, itemsep=0.15\baselineskip]
+}{%
+  \end{enumerate}
+}
