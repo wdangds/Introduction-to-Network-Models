@@ -1,20 +1,20 @@
-# Chapter 1 — Introduction to Network Models
+# Introduction to Network Models — Chapter summaries
 
-A concise, conceptual introduction to why networks matter and the basic tools for reasoning about them. Chapter 1 introduces the language of graphs, contrasts structure and behavior, and surveys core phenomena that arise in social, information, and economic networks.
+This repository contains the start of a short book on network models. Below are concise summaries of the first two chapters and a brief roadmap for continuing the text.
 
-Key takeaways:
+## Chapter 1 — Introduction to Network Models
 
-- Networks appear everywhere: social ties, information systems, markets, and infrastructure. Their structure shapes how things spread and how individuals influence outcomes.
-- Basic graph vocabulary: nodes, edges, paths, walks, degree, neighborhoods, connected components, and diameter.
-- Important distinctions: undirected vs directed graphs; simple vs weighted/multigraphs; local measures (degree) vs global measures (connectivity, diameter).
-- Dynamics and strategic behavior: diffusion, information cascades, network effects, and how game-theoretic reasoning (e.g., Nash equilibrium) applies when payoffs depend on neighbors.
+Chapter 1 motivates the study of networks and introduces the basic vocabulary and intuition. It shows where networks appear (social ties, information systems, markets, infrastructure), explains the difference between structural connectedness (who is linked to whom) and behavioral connectedness (how actions and incentives propagate), and introduces key terms: nodes, edges, paths, degree, neighborhoods, components, and diameter. The chapter also sketches core phenomena such as cascades, network effects, and the interplay between structure and strategic behavior.
 
-Keep-writing plan:
+## Chapter 2 — Mathematics of Networks
 
-- Chapter 2 — Graph algorithms & measures (centrality, clustering, shortest paths).
-- Chapter 3 — Random graph models and generative processes (Erdos–Renyi, preferential attachment).
-- Chapter 4 — Dynamics on networks (epidemics, threshold/adoption models, opinion dynamics).
-- Exercises and suggested datasets for hands-on practice.
+Chapter 2 develops the formal tools used to represent and reason about network structure. Topics include the adjacency matrix (undirected, directed, weighted), degree and connectance, basic matrix identities, and definitions used to study connectivity and robustness: components, vertex- and edge-connectivity, minimum degree, and how these measures relate to network resilience.
 
+## Roadmap / Keep-writing plan
+
+- Chapter 3 — Graph algorithms & measures (centrality, clustering, shortest paths).
+- Chapter 4 — Random graph models and generative processes (Erdos–Renyi, preferential attachment).
+- Chapter 5 — Dynamics on networks (epidemics, threshold/adoption models, opinion dynamics).
+- Appendices: exercises, suggested datasets, and brief algorithm reference.
 
 
