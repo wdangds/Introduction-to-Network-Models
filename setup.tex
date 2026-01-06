@@ -23,8 +23,11 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{tikz}
-\usetikzlibrary{positioning, fit, backgrounds}
+\usetikzlibrary{positioning, fit, backgrounds, calc}
+\usetikzlibrary{arrows.meta}
 \usepackage{amsthm}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -35,14 +38,18 @@
 %%%%%%%%%%%%%%%%%%%%%%
 % Set up fancy header/footer
 \pagestyle{fancy}
-\fancyhead[LO,L]{Introduction to Network Model}
-\fancyhead[CO,C]{}
-\fancyhead[RO,R]{\today}
-% \fancyfoot[LO,L]{aivietnam.edu.vn}
-% \fancyfoot[CO,C]{}
-% \fancyfoot[RO,R]{www.facebook.com/aivietnam.edu.vn}
+
+% Put chapter title on the left, section title on the right
+\fancyhead[L]{\nouppercase{\leftmark}}   % Chapter
+\fancyhead[R]{\nouppercase{\rightmark}}  % Section
+
+% Optional: page number in the footer center
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt} % shows the footer line
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 \usepackage[most]{tcolorbox}  % For the tcolorbox environment
@@ -99,7 +106,34 @@
    title={Tip: #2}}%
   {tip}
 
+\newtcbtheorem[number within=section,crefname={recap}{recaps}]%
+  {recap}{Recap}%
+  {mytheo,
+   colback=gray!6,
+   colframe=gray!70!black!25,
+   boxed title style={colback=gray!15},
+   title={Recap: #2}}%
+  {recap}
 
+  \newtcbtheorem[number within=section,crefname={proposition}{propositions}]%
+  {proposition}{Proposition}%
+  {mytheo,
+   colback=teal!3,
+   colframe=teal!60!black!20,
+   boxed title style={colback=teal!12}}%
+  {prop}
+
+  \newtcbtheorem[number within=section,crefname={theorem}{theorems}]%
+  {theorem}{Theorem}%
+  {mytheo,
+   colback=cyan!2,
+   colframe=cyan!60!black!20,
+   boxed title style={colback=cyan!12}}%
+  {thm}
+\newtcbtheorem[number within=section,crefname={lemma}{lemmas}]%
+  {lemma}{Lemma}%
+  {mytheo,colback=yellow!3,colframe=yellow!70!black!20,boxed title style={colback=yellow!15}}%
+  {lem}
 % listings settings
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -121,12 +155,14 @@
 }
 
 \lstset{style=mystyle}
-
+% ---- Header helper for assignment blocks ----
+\newcommand{\AssignmentMark}{\markright{Assignment}}
 \newif\ifshowanswers
 \showanswersfalse  % change to \showanswerstrue to print the answer key
 
 \newenvironment{mcqblock}[1]{%
   \section*{#1}
+  \AssignmentMark
   \begin{multicols}{2}
   \begin{enumerate}[leftmargin=*, itemsep=0.6\baselineskip]
 }{%
@@ -136,6 +172,26 @@
 
 \newenvironment{choices}{%
   \begin{enumerate}[label=(\Alph*), leftmargin=*, itemsep=0.15\baselineskip]
+}{%
+  \end{enumerate}
+}
+
+\newenvironment{frqblock}[1]{%
+  \section*{#1}
+  \AssignmentMark
+  \begin{enumerate}[leftmargin=*, itemsep=0.9\baselineskip]
+}{%
+  \end{enumerate}
+}
+
+\newenvironment{frqparts}{%
+  \begin{enumerate}[label=(\alph*), leftmargin=*, itemsep=0.35\baselineskip]
+}{%
+  \end{enumerate}
+}
+
+\newenvironment{frqsubparts}{%
+  \begin{enumerate}[label=(\roman*), leftmargin=*, itemsep=0.25\baselineskip]
 }{%
   \end{enumerate}
 }

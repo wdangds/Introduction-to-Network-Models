@@ -1,4 +1,4 @@
-\chapter{Motivation, and introduction to graph theory}
+\chapter{Motivation, and introduction to graph theory}\label{ch:motivation-introduction}
 
 \section{Aspects of Networks}
 \subsection{Overview: The Connected World}
@@ -292,7 +292,7 @@ The \emph{distance} between two vertices $u$ and $v$, denoted $d(u,v)$, is the l
 
 Efficient algorithms exist for computing shortest paths in both undirected and directed graphs, such as Dijkstra's algorithm for graphs with non-negative edge weights, Floyd-Warshall algorithm for dense graphs, and Bellman-Ford algorithm for graphs with negative edge weights.
 
-\subsubsection{Connectivity}
+\subsubsection{Connectivity}\label{sec:connectivity}
 Vertex $v$ is \emph{reachable} from vertex $u$ if there exists a path from $u$ to $v$.
 
 \begin{definition}{Connected graphs (Undirected)}{def:connected-graphs-undirected}
@@ -346,7 +346,7 @@ A \emph{clique} in a graph is a subset of vertices such that every two distinct 
 
 \input{fig/clique.tex}
 
-\subsubsection{Regular graphs}
+\subsubsection{Regular graphs}\label{regular-graphs}
 
 A \emph{regular graph} is a graph where every vertex has the same degree $k$. Such a graph is called a $k$-regular graph.
 
@@ -357,7 +357,7 @@ Regular graphs frequently arise in the study of crystal structures (physics/chem
 
 \subsubsection{Trees and Acyclic Graphs}
 \begin{definition}
-{Trees and Forests}{def:trees-forests}
+{Trees and Forests}{trees-forests}
 A connected graph that is acyclic (contains no cycles) is called a \emph{tree}. 
 
 A \emph{forest} is a disjoint set of trees.
@@ -367,7 +367,7 @@ A \emph{forest} is a disjoint set of trees.
 A \emph{directed tree} (or \emph{arborescence}) is a directed graph where there is a unique directed path from a designated root node to every other node. 
 
 \begin{definition}
-{Directed Acyclic Graph (DAG)}{def:directed-acyclic-graph}
+{Directed Acyclic Graph (DAG)}{directed-acyclic-graph}
 A \emph{directed acyclic graph} (DAG) is a directed graph with no directed cycles. The underlying graph of a DAG need not be a tree. DAGs are commonly used to represent hierarchical structures, such as task scheduling or data processing pipelines.
 \end{definition}
 
